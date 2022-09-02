@@ -173,6 +173,6 @@ $(document).ready(function () {
 	$(".tab-content__item").not(":first").hide();
 	$(".service__wrapper .service__tab").click(function () {
 		$(".service__wrapper .service__tab").removeClass("active").eq($(this).index()).addClass("active");
-		$(".tab-content__item").hide().eq($(this).index()).fadeIn();
+		$(".tab-content__item").hide().eq($(this).index()).fadeIn(500);
 	}).eq(0).addClass("active");
 });
