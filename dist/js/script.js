@@ -169,4 +169,10 @@ $(document).ready(function () {
 		$('.header__burger,.header__wrapper').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
+
+	$(".tab-content__item").not(":first").hide();
+	$(".service__wrapper .service__tab").click(function () {
+		$(".service__wrapper .service__tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".tab-content__item").hide().eq($(this).index()).fadeIn();
+	}).eq(0).addClass("active");
 });
