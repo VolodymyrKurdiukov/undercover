@@ -305,4 +305,12 @@ $(document).ready(function () {
 		$(".portfolio__wrapper .portfolio__tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".item-portfolio").hide().eq($(this).index()).fadeIn(500);
 	}).eq(0).addClass("active");
+
+	$("a.lamp__scroll").on("click", function (e) {
+		e.preventDefault();
+		var anchor = $(this).attr('href');
+		$('html, body').stop().animate({
+			scrollTop: $(anchor).offset().top
+		}, 800);
+	});
 });
